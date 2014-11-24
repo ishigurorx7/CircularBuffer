@@ -12,18 +12,18 @@ The circular buffer and their utility routines are defined in cirucluarBuffer.h 
 
   The test program consists of following three tickers (interrupt driven tasks that are periodically called by timer tick):
 
-1  myBufferEnque:  En-queueing single element from buffer every 10 ms
-2  myBufferDeque:  De-queueing single element from buffer every 15 ms
-3  bufUsageMeter:   Display LED(s) to shows usage amount of the buffer 85 ms
+* myBufferEnque:  En-queueing single element from buffer every 10 ms
+* myBufferDeque:  De-queueing single element from buffer every 15 ms
+* bufUsageMeter:   Display LED(s) to shows usage amount of the buffer 85 ms
 
 3 Test sequence
 ===============
 
 Here is the sequence of circular buffer test:
 
-1 Diagnostics mbed (LPC1768)'s mounted 4 LEDs by displaying few different patterns. It takes 2-4 seconds.
-2 Kick off 3 tickers mentioned above, and operator can see the state by seeing 4 LED's and console output if you setup the USB-console setups.
-3 Whenever en-queue or de-queue encounters their non-programmable conditions; buffer full or empty, their ticker's interval time amount is switched between myBufferEnque and myBufferDeque so that program can continue be executed.
+* Diagnostics mbed (LPC1768)'s mounted 4 LEDs by displaying few different patterns. It takes 2-4 seconds.
+* Kick off 3 tickers mentioned above, and operator can see the state by seeing 4 LED's and console output if you setup the USB-console setups.
+* Whenever en-queue or de-queue encounters their non-programmable conditions; buffer full or empty, their ticker's interval time amount is switched between myBufferEnque and myBufferDeque so that program can continue be executed.
  
 4 Notes
 =======

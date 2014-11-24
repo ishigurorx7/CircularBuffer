@@ -14,7 +14,7 @@ The circular buffer and their utility routines are defined in cirucluarBuffer.h 
 
 * myBufferEnque:  En-queueing single element from buffer every 10 ms
 * myBufferDeque:  De-queueing single element from buffer every 15 ms
-* bufUsageMeter:   Display LED(s) to shows usage amount of the buffer 85 ms
+* bufUsageMeter:   Display LED(s) to shows buffer usage every 85 ms
 
 3 Test sequence
 ===============

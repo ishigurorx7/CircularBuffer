@@ -65,30 +65,15 @@ void bufUsageMeter()
   }
 
   if (usage <= 1) {
-    bufLed0 = 0;
-    bufLed1 = 0;
-    bufLed2 = 0;
-    bufLed3 = 0;
+    bufLed_onoff(0, 0, 0, 0);
   } else if (usage > 1 && usage <= 25) {
-    bufLed0 = 1;
-    bufLed1 = 0;
-    bufLed2 = 0;
-    bufLed3 = 0;
+    bufLed_onoff(1, 0, 0, 0);
   } else if (usage > 25 && usage <= 50) {
-    bufLed0 = 1;
-    bufLed1 = 1;
-    bufLed2 = 0;
-    bufLed3 = 0;
+    bufLed_onoff(1, 1, 0, 0);
   } else if (usage > 50 && usage <= 75) {
-    bufLed0 = 1;
-    bufLed1 = 1;
-    bufLed2 = 1;
-    bufLed3 = 0;
+    bufLed_onoff(1, 1, 1, 0);
   } else if (usage > 75 && usage <= 100) {
-    bufLed0 = 1;
-    bufLed1 = 1;
-    bufLed2 = 1;
-    bufLed3 = 1;
+    bufLed_onoff(1, 1, 1, 1);
   }
 }
 
